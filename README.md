@@ -5,7 +5,7 @@
 - **Author(s):** Naveen Kumar Bandaru
 - **Published In:** International Journal of Technology and Applied Science (IJTAS)
 - **Publication Date:** Oct, 2024
-- **ISSN:**  2230-9004
+- **E-ISSN:**  2230-9004
 
 ### Abstract
 Distributed transaction systems often experience high commit latency because each transaction is processed independently with repeated coordination and synchronization among nodes. This work examines the impact of immediate commit processing on latency as cluster size increases. A batching based commit approach is introduced where multiple transactions are processed collectively to reduce repeated coordination overhead. Experimental analysis across different cluster sizes shows that grouped commit processing significantly lowers commit latency and improves scalability in distributed environments.
@@ -48,12 +48,12 @@ The approach can support distributed databases, cloud services, financial applic
 ### Citation
 Lightweight Runtime Conflict Detection for CPU Efficient Transaction Processing
 * Naveen Kumar Bandaru
-* International Journal of Intelligent Systems and Applications in Engineering (IJISAE) 
-* ISSN 2147-6799
+* International Journal of Technology and Applied Science (IJTAS) 
+* E-ISSN 2230-9004
 * License \
 This research is shared for a academic and research purposes. For commercial use, please contact the author.\
 **Resources** \
-https://www.ijisae.org/index.php/IJISAE \
+https://www.ijtas.com  \
 **Author Contact** \
 **LinkedIn**: linkedin.com/in/naveen-bandaru | **Email**: naveen.bandaru@gmail.com
 
