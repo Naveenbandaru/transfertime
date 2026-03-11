@@ -8,32 +8,33 @@
 - **E-ISSN:**  2230-9004
 
 ### Abstract
-Distributed transaction systems often experience high commit latency because each transaction is processed independently with repeated coordination and synchronization among nodes. This work examines the impact of immediate commit processing on latency as cluster size increases. A batching based commit approach is introduced where multiple transactions are processed collectively to reduce repeated coordination overhead. Experimental analysis across different cluster sizes shows that grouped commit processing significantly lowers commit latency and improves scalability in distributed environments.
+Distributed systems frequently experience high network delays because large datasets are transmitted in raw form across network links. This study examines how encoded data transfers influence network transfer time and communication efficiency. By reducing the volume of transmitted data, encoded transfers shorten transmission duration and lower bandwidth consumption. Experimental evaluation across increasing file sizes shows that optimized and compressed transfers significantly reduce transfer time and improve scalability in distributed environments.
 
-### Primary Contributions of the Study
-- **Collective Transaction Commit Strategy:**  
-Presented a commit handling strategy that groups several transactions together, allowing multiple operations to complete within a single coordination cycle and reducing repeated commit procedures.
+### Fundamental Contributions of the Work
+- **Encoded Data Transfer Strategy:**  
+Introduced a data transfer approach that converts raw payloads into compact encoded representations before transmission, reducing the amount of data sent across network links.
 
-- **Efficient Coordination Handling:**  
-Developed a commit processing model that reduces repeated communication and synchronization between coordinator and participant nodes during distributed transaction finalization.
-- **Prototype Based Experimental Setup:** 
-Created a distributed transaction processing simulation using Go based concurrent processes to emulate coordinator participant interactions and observe commit behavior under varying workloads.
+- **Efficient Network Communication Model:**  
+Designed a data movement framework that reduces prolonged network occupancy by lowering payload size and shortening the duration of data transmission.
 
-- **Evaluation with Increasing Node Configurations:**  
-Analyzed commit latency across clusters containing 3, 5, 7, 9, and 11 nodes to understand how transaction completion time changes as distributed systems expand.
+- **Distributed Transfer Simulation Framework:** 
+Implemented a data transfer evaluation environment using Go based processing to simulate data movement and measure transfer time across varying file sizes.
 
-### System Relevance and Operational Value
-- **Faster Transaction Completion:**
-Grouped commit processing shortens the time required to finalize transactions by reducing the number of coordination rounds compared with traditional independent commit mechanisms.
+- **Performance Evaluation with Increasing Data Volumes:**  
+Analyzed transfer time behavior for file sizes ranging from 100 MB to 900 MB to study how optimized data movement improves scalability and communication efficiency.
 
-- **Improved Processing Efficiency:**  
-Handling several transactions together decreases repeated synchronization and communication overhead, enabling faster processing of transactional workloads in distributed environments.
+### System Importance and Practical Impact
+- **Reduced Network Transfer Time:**
+Encoded data movement significantly decreases transmission duration compared with baseline raw data transfer mechanisms.
 
-- **Stable Performance with System Growth:**  
-Latency increases gradually as cluster size expands, demonstrating that batching commit operations supports scalable transaction processing in distributed infrastructures.
+- **Improved Network Resource Utilization:**  
+Lower data volume reduces bandwidth consumption and minimizes congestion on shared communication links.
 
-- **Usefulness for Modern Distributed Platforms:**  
-The approach can support distributed databases, cloud services, financial applications, and large scale enterprise platforms requiring efficient and scalable transaction commit processing.
+- **Better Scalability for Data Intensive Systems:**  
+Transfer time grows more gradually as data size increases, demonstrating improved scalability for large data transfers.
+
+- **Applicability to Distributed Platforms:**  
+The approach can benefit cloud systems, distributed storage platforms, analytics pipelines, and other environments that frequently exchange large datasets across networks.
 
 ### Experimental Results (Summary)
 
