@@ -38,13 +38,13 @@ The approach can benefit cloud systems, distributed storage platforms, analytics
 
 ### Experimental Results (Summary)
 
-  | Nodes | Lock Based 2PL CPU %| Lightweight Runtime Detection %| Improvment (%) |
-  |-------|---------------------| -------------------------------| ---------------|
-  | 3     |  88                 | 55                             | 37.50          |
-  | 5     |  84                 | 49                             | 41.67          |
-  | 7     |  82                 | 46                             | 43.90          |
-  | 9     |  80                 | 43                             | 46.25          |
-  | 11    |  79                 | 41                             | 48.10          |
+  | File Size (MB) | Unoptimized transfer time (ms) | Optimized transfer time (ms)| Improvment (%) |
+  |----------------|--------------------------------| ----------------------------| ---------------|
+  | 100            |  820                           | 480                         | 41.46          |
+  | 300            |  2350                          | 1320                        | 43.83          |
+  | 500            |  3800                          | 2050                        | 46.05          |
+  | 700            |  5200                          | 2750                        | 47.12          |
+  | 900            |  6650                          | 3400                        | 48.87          |
 
 ### Citation
 Lightweight Runtime Conflict Detection for CPU Efficient Transaction Processing
