@@ -1,42 +1,39 @@
 # transfertime
-Encoded Data Transfers for Reducing Raw Network Transfer Time
-
-# cpu_usage
-**Lightweight Runtime Conflict Detection for CPU Efficient Transaction Processing**
+**Encoded Data Transfers for Reducing Raw Network Transfer Time**
 
 ### Paper Information
 - **Author(s):** Naveen Kumar Bandaru
-- **Published In:** International Journal of Intelligent Systems and Applications in Engineering (IJISAE)
-- **Publication Date:** June, 2023
-- **ISSN:**  2147-6799
+- **Published In:** International Journal of Technology and Applied Science (IJTAS)
+- **Publication Date:** Oct, 2024
+- **ISSN:**  2230-9004
 
 ### Abstract
-High concurrency transaction processing systems often experience performance degradation due to conflicts among simultaneous read and write operations. Conventional mechanisms such as Two Phase Locking and Optimistic Concurrency Control introduce blocking, repeated retries, and significant processor overhead. This work examines the impact of these mechanisms on CPU utilization and scalability in distributed environments. A lightweight runtime conflict detection approach is introduced to identify conflicts earlier during execution and reduce unnecessary computation. Experimental evaluation across multiple cluster sizes demonstrates improved processor efficiency and better scalability in transaction processing systems.
+Distributed transaction systems often experience high commit latency because each transaction is processed independently with repeated coordination and synchronization among nodes. This work examines the impact of immediate commit processing on latency as cluster size increases. A batching based commit approach is introduced where multiple transactions are processed collectively to reduce repeated coordination overhead. Experimental analysis across different cluster sizes shows that grouped commit processing significantly lowers commit latency and improves scalability in distributed environments.
 
-### Major Research Contributions
-- **Lightweight Runtime Conflict Detection Mechanism:**  
-Introduced a runtime method that detects transactional conflicts early during execution using compact metadata instead of relying on heavy locking or late validation.
+### Primary Contributions of the Study
+- **Collective Transaction Commit Strategy:**  
+Presented a commit handling strategy that groups several transactions together, allowing multiple operations to complete within a single coordination cycle and reducing repeated commit procedures.
 
-- **Processor Efficient Transaction Execution:**  
-Designed a conflict management approach that reduces blocking synchronization and repeated transaction retries, leading to lower processor utilization during high concurrency workloads.
-- **Distributed Experimental Evaluation:** 
-Implemented a transaction processing model using Go based concurrent workers to simulate distributed workloads and evaluate processor utilization across cluster sizes.
+- **Efficient Coordination Handling:**  
+Developed a commit processing model that reduces repeated communication and synchronization between coordinator and participant nodes during distributed transaction finalization.
+- **Prototype Based Experimental Setup:** 
+Created a distributed transaction processing simulation using Go based concurrent processes to emulate coordinator participant interactions and observe commit behavior under varying workloads.
 
-- **Scalability Analysis Across Cluster Sizes:**  
-Conducted experiments on clusters with 3, 5, 7, 9, and 11 nodes to analyze how CPU utilization changes as transaction processing systems scale.
+- **Evaluation with Increasing Node Configurations:**  
+Analyzed commit latency across clusters containing 3, 5, 7, 9, and 11 nodes to understand how transaction completion time changes as distributed systems expand.
 
-### Practical Significance and Impact
-- **Reduced Processor Utilization:**
-The lightweight runtime approach significantly lowers CPU usage compared with conventional locking and optimistic concurrency control mechanisms.
+### System Relevance and Operational Value
+- **Faster Transaction Completion:**
+Grouped commit processing shortens the time required to finalize transactions by reducing the number of coordination rounds compared with traditional independent commit mechanisms.
 
-- **Improved Transaction Processing Efficiency:**  
-Early conflict detection minimizes wasted computation caused by blocking synchronization and repeated transaction retries.
+- **Improved Processing Efficiency:**  
+Handling several transactions together decreases repeated synchronization and communication overhead, enabling faster processing of transactional workloads in distributed environments.
 
-- **Better Scalability for Distributed Systems:**  
-Processor consumption decreases steadily as cluster size increases, demonstrating efficient resource utilization and improved scalability.
+- **Stable Performance with System Growth:**  
+Latency increases gradually as cluster size expands, demonstrating that batching commit operations supports scalable transaction processing in distributed infrastructures.
 
-- **Suitability for High Concurrency Platforms:**  
-The framework supports efficient transaction processing in environments such as distributed databases, cloud systems, and microservice based platforms.
+- **Usefulness for Modern Distributed Platforms:**  
+The approach can support distributed databases, cloud services, financial applications, and large scale enterprise platforms requiring efficient and scalable transaction commit processing.
 
 ### Experimental Results (Summary)
 
