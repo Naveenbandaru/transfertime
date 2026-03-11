@@ -38,7 +38,7 @@ The approach can benefit cloud systems, distributed storage platforms, analytics
 
 ### Experimental Results (Summary)
 
-  | File Size (MB) | Unoptimized transfer time (ms) | Optimized transfer time (ms)| Improvment (%) |
+  | File Size (MB) | Unoptimized transfer time (ms) | Optimized transfer time (ms)| Improvement (%) |
   |----------------|--------------------------------| ----------------------------| ---------------|
   | 100            |  820                           | 480                         | 41.46          |
   | 300            |  2350                          | 1320                        | 43.83          |
